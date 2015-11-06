@@ -3,24 +3,24 @@
 	"manifest_version": 2,
 	"name": "secret-chrome-extension",
 	"version": "0",
-	"content_scripts": [
-		{
-			"matches": [
-				"https://my.ucf.edu/*"
-			],
-			"js": [
-				"injectScript.js"
-			]
-		}	
-	],
-	"permissions": [
-		"https://my.ucf.edu/*",
+	"browser_action":
+	{
+		"name": "Button"
+	},
+	"content_scripts": 
+	[{
+		"matches": ["https://my.ucf.edu/*"],
+		"js": ["injectScript.js", "jquery-2.1.4.min.js"]
+		
+	}],
+	"permissions": 
+	[
+		"https://my.ucf.edu/*", 
 		"https://ratemyprofessors.com/*"
 	],
-	"background": {
-		"scripts": [
-			"background.js"
-		],
-	"persistent": true
+	"background": 
+	{
+		"scripts": ["background.js"],
+		"persistent": true
 	}
 }
