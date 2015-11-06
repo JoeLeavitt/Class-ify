@@ -1,0 +1,26 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"manifest_version": 2,
+	"name": "secret-chrome-extension",
+	"version": "0",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://my.ucf.edu/*"
+			],
+			"js": [
+				"injectScript.js"
+			]
+		}	
+	],
+	"permissions": [
+		"https://my.ucf.edu/*",
+		"https://ratemyprofessors.com/*"
+	],
+	"background": {
+		"scripts": [
+			"background.js"
+		],
+	"persistent": true
+	}
+}
