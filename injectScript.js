@@ -19,15 +19,15 @@ function main()
 		
 		console.log("[PROFESSOR NAME]: " + currProfessor);
 
-		//if(currProfessor != "Staff" && currProfessor != "DoneParsing")
-		//	requestRatingsPage(currProfessor, professorIndex);
+		if(currProfessor != "Staff" && currProfessor != "DoneParsing")
+			requestRatingsPage(currProfessor, professorIndex);
 
 		professorIndex++;
 	}
 
 }	
 
-
+/* Parses professor names from myUCF class search page */
 function parseProfessorName(professorIndex)
 {
 	try{
@@ -41,12 +41,38 @@ function parseProfessorName(professorIndex)
 	}
 }
 
+/* Sends message to background.js to request search page from ratemyprofessor.com */
 function requestRatingsPage(currProfessor, professorIndex)
 {
+	chrome.runtime.sendMessage
+	({
+		method: 'POST',
+		action: 'xhttp',
+		url: 'http://www.ratemyprofessors.com/search.jsp?queryBy=teacherName&schoolName=university%20of%20central%20florida&queryoption=HEADER&query=' 
+			+ CurrentProfessor + '&facetSearch=true',
+		data: '',
+		link: searchPageURL,
+		index: professorIndex
+		
+		}, function(response){
+		
+		var skertHTML = response.response;
+		
+		var div = document.createElement('div');
+		
+		div.innerHTML = skertHTML.replace(/<script(.|\s)*?\/script>/g, '');
 
+		var professorClass = div.getElementsByClassName("listing PROFESSOR")[0].getElementsByTagName('a')[0];
+
+		searchPageURL = "http://www.ratemyprofessors.com" + professorClass.getAttribute('href');
+		
+		console.log("[PROFESSOR URL]: " + searchPageURL);
+
+		//requestProfessorData(response.professorIndex, searchPageURL);
+	});
 }
 
 function requestProfessorData()
 {
-
+	
 }
