@@ -3,7 +3,6 @@
  * Last Edited: 11/06/15      *
  ******************************/
 
-
 /* Fires injectScript.js when extension button is pressed */
 chrome.browserAction.onClicked.addListener(function (tab)
 {
