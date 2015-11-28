@@ -1,9 +1,5 @@
-# myUCF Portal Plugin
+## myUCF Portal Plugin
 
-#### Work In Progress
+Injects data from rate my professor onto class search page.
 
-Currently thinking of a name for the extension
-
-Injects data from rate my professor onto class search page
-
-Will eventually have other useful functionality for students
+I plan to include more functionality in the future.
