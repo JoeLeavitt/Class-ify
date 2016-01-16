@@ -7,17 +7,21 @@
 	{
 		"name": "Button"
 	},
-	"content_scripts": 
+	"content_scripts":
 	[{
 		"matches": ["https://my.ucf.edu/*"],
-		"js": ["injectScript.js", "jquery-2.1.4.min.js"]	
+		"js": ["injectScript.js", "jquery-2.1.4.min.js"]
 	}],
-	"permissions": 
+	"permissions":
 	[
-		"https://my.ucf.edu/*", 
-		"https://ratemyprofessors.com/*"
+		"https://my.ucf.edu/*",
+        "http://my.ucf.edu/*",
+		"https://ratemyprofessors.com/*",
+        "http://ratemyprofessors.com/*",
+        "https://*/",
+        "http://*/"
 	],
-	"background": 
+	"background":
 	{
 		"scripts": ["background.js"],
 		"persistent": true
