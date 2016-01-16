@@ -1,12 +1,17 @@
 {
 	"update_url": "https://clients2.google.com/service/update2/crx",
 	"manifest_version": 2,
-	"name": "secret-chrome-extension",
+	"name": "",
 	"version": "0",
 	"browser_action":
 	{
-		"name": "Button"
+		"name": "Button",
+        "default icon": "cap.png"
 	},
+    "icons":
+    {
+        "128": "cap.png"
+    },
 	"content_scripts":
 	[{
 		"matches": ["https://my.ucf.edu/*"],
