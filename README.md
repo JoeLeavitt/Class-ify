@@ -1,5 +1,6 @@
 ## myUCF Portal Plugin
 
-Injects data from rate my professor onto class search page.
+#### Chrome extension for students at the University of Central Florida
+##### Injects Rate my Professor overall rating onto my.ucf class search page
 
-I plan to include more functionality in the future.
+![alt tag](http://i.imgur.com/kSyrlN2.png)
