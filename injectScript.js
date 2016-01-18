@@ -18,6 +18,13 @@ function main()
 	{
 		currProfessor = parseProfessorName(professorIndex);
 
+        if(currProfessor.indexOf(',') != 1)
+        {
+            var temp = currProfessor.split(',');
+            currProfessor = temp[0].toString();
+        }
+        console.log(currProfessor);
+
 		if(currProfessor != "Staff" && currProfessor != "DoneParsing")
 			requestRatingsPage(currProfessor, professorIndex);
 
