@@ -1,8 +1,8 @@
 {
 	"update_url": "https://clients2.google.com/service/update2/crx",
 	"manifest_version": 2,
-	"name": "",
-	"version": "0",
+	"name": "Class-ify",
+	"version": "1.1",
 	"browser_action":
 	{
 		"name": "Button",
