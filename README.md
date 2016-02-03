@@ -1,6 +1,5 @@
-## myUCF Portal Plugin
+## Class-ify
 
-#### Chrome extension for students at the University of Central Florida
-##### Injects Rate my Professor overall rating onto my.ucf class search page
+##### A chrome extension for the students at UCF that injects Rate my Professor ratings onto the my.ucf class search page
 
 ![alt tag](http://i.imgur.com/kSyrlN2.png)
